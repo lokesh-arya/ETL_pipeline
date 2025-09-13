@@ -1,5 +1,5 @@
 from fetch_data import fetch_earthquake_data
-from parse_data import parse
+from parse_data import parse_earthquake_data
 
 import streamlit as st
 import plotly.express as px
@@ -8,7 +8,7 @@ URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojs
 
 # Fetch data
 data = fetch_earthquake_data(URL)
-df = parse(data)
+df = parse_earthquake_data(data)
 
 # Dashboard UI
 st.title("🌍 Real-Time Earthquake Dashboard")
